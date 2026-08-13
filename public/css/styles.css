@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #061826, #0b2d4d, #123c69);
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 950px;
+  min-height: 100vh;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 28px;
+  padding: 45px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.badge {
+  display: inline-block;
+  background: #72d66b;
+  color: #082018;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #dcecff;
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.form input {
+  flex: 1;
+  padding: 17px;
+  border-radius: 14px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.form button {
+  padding: 17px 26px;
+  border-radius: 14px;
+  border: none;
+  background: #72d66b;
+  color: #082018;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 18px;
+  background: rgba(255, 64, 64, 0.18);
+  color: #ffb3b3;
+  border: 1px solid rgba(255, 64, 64, 0.35);
+  padding: 14px;
+  border-radius: 14px;
+}
+
+.back {
+  color: #72d66b;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+.temperature {
+  margin: 35px 0;
+}
+
+.temperature span {
+  display: block;
+  font-size: 82px;
+  font-weight: bold;
+  color: #72d66b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.info-box {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 22px;
+  border-radius: 18px;
+}
+
+.info-box strong {
+  display: block;
+  color: #9bd7ff;
+  margin-bottom: 10px;
+}
+
+.info-box span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.date {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #b8d8f5;
+}
+
+@media (max-width: 700px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .temperature span {
+    font-size: 60px;
+  }
+}

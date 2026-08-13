@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resultado del clima</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card result-card">
+      <a href="/" class="back">← Nueva búsqueda</a>
+
+      <span class="badge">Clima actual</span>
+      <h1><%= clima.ciudad %>, <%= clima.pais %></h1>
+
+      <% if (clima.provincia) { %>
+        <p><%= clima.provincia %></p>
+      <% } %>
+
+      <div class="temperature">
+        <span><%= clima.temperatura %>°C</span>
+        <p><%= clima.descripcion %></p>
+      </div>
+
+      <div class="grid">
+        <div class="info-box">
+          <strong>Humedad</strong>
+          <span><%= clima.humedad %>%</span>
+        </div>
+
+        <div class="info-box">
+          <strong>Viento</strong>
+          <span><%= clima.viento %> km/h</span>
+        </div>
+
+        <div class="info-box">
+          <strong>Presión</strong>
+          <span><%= clima.presion %> hPa</span>
+        </div>
+      </div>
+
+      <p class="date">Actualizado: <%= clima.fecha %></p>
+    </section>
+  </main>
+</body>
+</html>

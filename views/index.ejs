@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Clima Pública</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card hero-card">
+      <span class="badge">API pública sin registro</span>
+      <h1>Consultar clima actual</h1>
+      <p>Buscá una ciudad y obtené datos reales usando Node.js, Express y Open-Meteo.</p>
+
+      <form action="/clima" method="POST" class="form">
+        <input type="text" name="ciudad" placeholder="Ej: La Rioja, Buenos Aires, Madrid">
+        <button type="submit">Buscar clima</button>
+      </form>
+
+      <% if (error) { %>
+        <p class="error"><%= error %></p>
+      <% } %>
+    </section>
+  </main>
+</body>
+</html>
